@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="YiMi" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonViewContainer" destination="Z7p-nB-VnH" id="9IQ-P4-Eft"/>
+                <outlet property="cancelButton" destination="jF9-hC-HVc" id="muj-Wc-TPO"/>
+                <outlet property="dismissButton" destination="k3d-ZK-LCe" id="bqb-d1-4Fq"/>
+                <outlet property="doneButton" destination="b5F-di-ffO" id="qHq-Qf-9v1"/>
+                <outlet property="flashButton" destination="sZ0-A0-fn3" id="GfV-hb-10w"/>
+                <outlet property="flipButton" destination="p3z-XQ-FTY" id="2A7-03-BHw"/>
+                <outlet property="snapButton" destination="OiE-vY-FG6" id="y4d-ke-ZUH"/>
+                <outlet property="tempImageView" destination="sCQ-kh-8F8" id="izg-2B-f0v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7p-nB-VnH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sCQ-kh-8F8">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        </imageView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jF9-hC-HVc">
+                            <rect key="frame" x="65" y="532" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="HKN-Ee-RSd"/>
+                                <constraint firstAttribute="height" constant="70" id="RYV-a8-xkZ"/>
+                            </constraints>
+                            <state key="normal" image="ic_retake"/>
+                            <connections>
+                                <action selector="retakePhoto:" destination="-1" eventType="touchUpInside" id="tVQ-hu-zo3"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5F-di-ffO">
+                            <rect key="frame" x="240" y="532" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="Vui-ej-SC1"/>
+                                <constraint firstAttribute="width" constant="70" id="vfw-iL-3Uf"/>
+                            </constraints>
+                            <state key="normal" image="ic_check"/>
+                            <connections>
+                                <action selector="addPhoto:" destination="-1" eventType="touchUpInside" id="I2f-EG-nbJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiE-vY-FG6">
+                            <rect key="frame" x="152" y="532" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="dcQ-Xx-90Q"/>
+                                <constraint firstAttribute="width" constant="70" id="eoc-j3-oL0"/>
+                            </constraints>
+                            <state key="normal" image="snap_btn"/>
+                            <connections>
+                                <action selector="capturePhoto:" destination="-1" eventType="touchUpInside" id="WvK-5C-otq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZ0-A0-fn3">
+                            <rect key="frame" x="315" y="22" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="DR9-Cw-Qi4"/>
+                                <constraint firstAttribute="height" constant="30" id="kdV-4e-ef0"/>
+                            </constraints>
+                            <state key="normal" image="ic_flash_off"/>
+                            <connections>
+                                <action selector="flashButtonPressed:" destination="-1" eventType="touchUpInside" id="Wn4-Hf-lkz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3d-ZK-LCe">
+                            <rect key="frame" x="65" y="556" width="25" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="5xN-5j-dxI"/>
+                                <constraint firstAttribute="width" constant="25" id="gJi-8V-ltJ"/>
+                            </constraints>
+                            <state key="normal" image="dismiss_camera"/>
+                            <connections>
+                                <action selector="dismissCarema:" destination="-1" eventType="touchUpInside" id="rWn-Yn-QuY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3z-XQ-FTY">
+                            <rect key="frame" x="277" y="549.5" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="0Cb-eh-2q4"/>
+                                <constraint firstAttribute="width" constant="36" id="zg5-hB-zd7"/>
+                            </constraints>
+                            <state key="normal" image="ic_loop"/>
+                            <connections>
+                                <action selector="changeCamera:" destination="-1" eventType="touchUpInside" id="FXi-X1-q1L"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="sZ0-A0-fn3" secondAttribute="trailing" constant="30" id="4zR-Yr-wjv"/>
+                        <constraint firstItem="sCQ-kh-8F8" firstAttribute="width" secondItem="Z7p-nB-VnH" secondAttribute="width" id="6j2-Cp-y4T"/>
+                        <constraint firstItem="sCQ-kh-8F8" firstAttribute="leading" secondItem="Z7p-nB-VnH" secondAttribute="leading" id="8Wx-kR-u6h"/>
+                        <constraint firstItem="sCQ-kh-8F8" firstAttribute="top" secondItem="Z7p-nB-VnH" secondAttribute="top" id="Aow-Y9-20h"/>
+                        <constraint firstItem="OiE-vY-FG6" firstAttribute="centerX" secondItem="Z7p-nB-VnH" secondAttribute="centerX" id="H3g-jh-xkb"/>
+                        <constraint firstItem="sCQ-kh-8F8" firstAttribute="height" secondItem="Z7p-nB-VnH" secondAttribute="height" id="J9D-E2-gNV"/>
+                        <constraint firstAttribute="bottom" secondItem="OiE-vY-FG6" secondAttribute="bottom" constant="65" id="JWd-IH-a0i"/>
+                        <constraint firstItem="p3z-XQ-FTY" firstAttribute="centerY" secondItem="OiE-vY-FG6" secondAttribute="centerY" id="K6q-Pk-kwB"/>
+                        <constraint firstAttribute="trailing" secondItem="p3z-XQ-FTY" secondAttribute="trailing" constant="62" id="PrY-uQ-kUS"/>
+                        <constraint firstAttribute="bottom" secondItem="sCQ-kh-8F8" secondAttribute="bottom" id="TEW-5A-Mmg"/>
+                        <constraint firstItem="b5F-di-ffO" firstAttribute="centerY" secondItem="OiE-vY-FG6" secondAttribute="centerY" id="Z41-Jl-Ucs"/>
+                        <constraint firstItem="jF9-hC-HVc" firstAttribute="centerY" secondItem="OiE-vY-FG6" secondAttribute="centerY" id="eNh-WD-5hH"/>
+                        <constraint firstAttribute="trailing" secondItem="sCQ-kh-8F8" secondAttribute="trailing" id="k40-kq-nET"/>
+                        <constraint firstItem="k3d-ZK-LCe" firstAttribute="centerY" secondItem="OiE-vY-FG6" secondAttribute="centerY" id="qLg-Bq-ab6"/>
+                        <constraint firstItem="k3d-ZK-LCe" firstAttribute="leading" secondItem="Z7p-nB-VnH" secondAttribute="leading" constant="65" id="rCN-Tk-IJk"/>
+                        <constraint firstItem="sZ0-A0-fn3" firstAttribute="top" secondItem="Z7p-nB-VnH" secondAttribute="top" constant="22" id="z1d-zc-fCJ"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="cWG-Cj-Dr1" appends="YES" id="onq-ja-RAl"/>
+                    </connections>
+                </view>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="Z7p-nB-VnH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2js-3p-qSL"/>
+                <constraint firstAttribute="bottom" secondItem="Z7p-nB-VnH" secondAttribute="bottom" id="DkH-mg-NQb"/>
+                <constraint firstItem="jF9-hC-HVc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="65" id="VKA-GR-FmM"/>
+                <constraint firstItem="Z7p-nB-VnH" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="dKY-gw-Q8o"/>
+                <constraint firstAttribute="trailing" secondItem="b5F-di-ffO" secondAttribute="trailing" constant="65" id="fJb-Dj-LgX"/>
+                <constraint firstItem="Z7p-nB-VnH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ftZ-lX-sOf"/>
+                <constraint firstAttribute="trailing" secondItem="Z7p-nB-VnH" secondAttribute="trailing" id="tob-aL-fe5"/>
+                <constraint firstItem="Z7p-nB-VnH" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="usm-gX-6Dp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="87.5" y="98.5"/>
+        </view>
+        <tapGestureRecognizer id="cWG-Cj-Dr1">
+            <connections>
+                <action selector="focusAndExposeTap:" destination="-1" id="9iX-l2-sPu"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="dismiss_camera" width="25" height="14"/>
+        <image name="ic_check" width="40" height="40"/>
+        <image name="ic_flash_off" width="48" height="48"/>
+        <image name="ic_loop" width="48" height="48"/>
+        <image name="ic_retake" width="40" height="40"/>
+        <image name="snap_btn" width="54" height="62"/>
+    </resources>
+</document>

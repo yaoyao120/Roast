@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="297" id="KGk-i7-Jjw" customClass="CanvasHeaderCell" customModule="YiMi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="471" height="297"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="471" height="296.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="Ci2-na-A22" customClass="CustomImageView" customModule="YiMi" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="471" height="237"/>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bz3-kI-ELK" customClass="RichTextView" customModule="YiMi" customModuleProvider="target">
+                        <rect key="frame" x="10" y="237" width="451" height="60.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Test">
+                                <attributes>
+                                    <font key="NSFont" size="30" name="Oswald-Light"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Bz3-kI-ELK" firstAttribute="top" secondItem="Ci2-na-A22" secondAttribute="bottom" id="nlQ-4O-Ydt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="Ci2-na-A22" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="9S3-Cw-DtY"/>
+                <constraint firstAttribute="trailing" secondItem="Ci2-na-A22" secondAttribute="trailing" id="FHS-q5-xub"/>
+                <constraint firstAttribute="bottom" secondItem="Bz3-kI-ELK" secondAttribute="bottom" id="IKu-14-rbu"/>
+                <constraint firstItem="Ci2-na-A22" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="JGc-QM-gmP"/>
+                <constraint firstAttribute="trailing" secondItem="Bz3-kI-ELK" secondAttribute="trailing" constant="10" id="Q5j-Zo-Dfd"/>
+                <constraint firstItem="Bz3-kI-ELK" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="10" id="qIL-nn-i24"/>
+            </constraints>
+            <connections>
+                <outlet property="coverImageView" destination="Ci2-na-A22" id="ju0-Jn-xeG"/>
+                <outlet property="titleTextView" destination="Bz3-kI-ELK" id="shF-wA-lIm"/>
+            </connections>
+            <point key="canvasLocation" x="152.5" y="104.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cover" width="800" height="400"/>
+    </resources>
+</document>
