@@ -1,5 +1,5 @@
 # Roast
-An instagram style app that allows user to post interesting photos and comment on the others!
+An instagram style app that allows user to post interesting photos and roast on the others! Have fun roasting :D
 
 - User login and signup with email address and password
 
